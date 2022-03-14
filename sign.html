@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="css/sign.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- home button -->
+
+<a href="index.html"><i class="fa fa-home" style="font-size:48px;color:#fff;position: relative;left:30px;top:10px"></i></a>
+	<!-- home button over -->
+  <div class="container">
+    <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+      </ul>
+      <form class="form-wrapper">
+        <fieldset class="section is-active">
+          <h3>Your Details</h3>
+          <input type="text" name="name" id="name" placeholder="Name">
+          <input type="text" name="email" id="email" placeholder="Email">
+          <div class="button">Next</div>
+        </fieldset>
+        <fieldset class="section">
+          <h3>Membership</h3>
+          <div class="row cf">
+            <div class="four col">
+              <input type="radio" name="r1" id="r1" checked>
+              <label for="r1">
+                <h4>Premium</h4>
+              </label>
+            </div>
+            <div class="four col">
+              <input type="radio" name="r1" id="r2"><label for="r2">
+                <h4>Plus</h4>
+              </label>
+            </div>
+            <div class="four col">
+              <input type="radio" name="r1" id="r3"><label for="r3">
+                <h4>None</h4>
+              </label>
+            </div>
+          </div>
+          <div class="button">Next</div>
+        </fieldset>
+        <fieldset class="section">
+          <h3>Choose a Password</h3>
+          <input type="password" name="password" id="password" placeholder="Password">
+          <input type="password" name="password2" id="password2" placeholder="Re-enter Password">
+          <input class="submit button" type="submit" value="Sign Up">
+        </fieldset>
+        <fieldset class="section">
+          <h3>Account Created!</h3>
+          <p>Your account has now been created.</p>
+          <div class="button">Reset Form</div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div class="box">
+  <a href="login.html" class="btn btn-white btn-animation-1">Login</a> 
+</div>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  $(".form-wrapper .button").click(function(){
+    var button = $(this);
+    var currentSection = button.parents(".section");
+    var currentSectionIndex = currentSection.index();
+    var headerSection = $('.steps li').eq(currentSectionIndex);
+    currentSection.removeClass("is-active").next().addClass("is-active");
+    headerSection.removeClass("is-active").next().addClass("is-active");
+
+    $(".form-wrapper").submit(function(e) {
+      e.preventDefault();
+    });
+
+    if(currentSectionIndex === 3){
+      $(document).find(".form-wrapper .section").first().addClass("is-active");
+      $(document).find(".steps li").first().addClass("is-active");
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

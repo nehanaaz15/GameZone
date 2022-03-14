@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>lets create</title>
+  <link rel="stylesheet" type="text/css" href="css/game.css">
+  <link rel="stylesheet" type="text/css" href="css/gamepreloader.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+</head>
+<body>
+	<div id="preloader">
+		<h1>Gaming in progress..</h1>
+<div id="cooking">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div id="area">
+    <div id="sides">
+      <div id="pan"></div>
+      <div id="handle"></div>
+    </div>
+    <div id="pancake">
+      <div id="pastry"></div>
+    </div>
+  </div>
+</div>
+	</div>
+<div class="ct" id="t1">
+ <div class="ct" id="t2">
+   <div class="ct" id="t3">
+     <div class="ct" id="t4">
+<section>  
+ <ul>
+   <a href="#t1"><li class="icon fa fa-home" id="uno"></li></a>
+   <a href="#t2"><li class="icon fa fa-dice" id="dos"></li></a>
+   <a href="#t3"><li class="icon fa fa-dove" id="tres"></li></a>
+   <a href="#t4"><li class="icon fab fa-stumbleupon" id="cuatro"></li></a>
+ </ul>
+  <div class="page" id="p1">
+     <li class="icon fa fa-home" ><span class="title">Home</span><a href="index.html" target="_blank" class="btn btn-bubble">Back to Home</a>
+</li>  
+  </div>
+  <div class="page" id="p2">
+    <li class="icon fa fa-dice"><span class="title">Dice</span><a href="games/dice/dice.html" target="_blank" class="btn btn-bubble">Play Now</a>
+</li>
+  </div>  
+  <div class="page" id="p3"><li class="icon fa fa-dove"><span class="title">Bird</span><a href="games/bird/bird.html" target="_blank" class="btn btn-bubble">Play Now</a></li>
+  </div>
+  <div class="page" id="p4">
+	<li class="icon fab fa-stumbleupon"><span class="title">Snake</span><a href="games/snake/snake.html" target="_blank" class="btn btn-bubble">Play Now</a></li>
+  </div>  
+
+</section>
+       
+     </div>
+     </div>
+   </div>
+  </div>
+<script type="text/javascript"> setTimeout(function(){        
+    $('#preloader').fadeOut();
+    $('.preloader_img').delay(550).fadeOut('slow');
+           $('body').delay(450).css({'overflow':'visible'});
+}, 5000);</script>
+</body>
+</html>

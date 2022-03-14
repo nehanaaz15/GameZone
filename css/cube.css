@@ -1,0 +1,69 @@
+
+.parta section{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+
+}
+ .parta section .box{
+	position: absolute;
+	top:calc(50% - 200px);
+	left: calc(50% - 200px);
+	width: 400px;
+	height: 400px;
+	transform-style: preserve-3d;
+}
+.parta section .box div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	transform-style: preserve-3d;
+	transform: rotateX(-20deg) rotateY(25deg) translate3d(-75px,-50px,150px);
+}
+.parta section .box div span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border:1px solid rgba(0,0,0,0.1);
+	background:#ccc;
+}
+.parta section .box div span:nth-child(1){
+	transform: rotateX(0deg) translate3d(0,0,200px);
+	
+}
+.parta section .box div span:nth-child(2){
+	transform: rotateY(90deg) translate3d(0,0,-200px);
+	
+}
+.parta section .box div span:nth-child(3){
+	transform: rotateX(90deg) translate3d(0,0,200px);
+
+}
+.parta section .box div span video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: blur(0);
+}
+.parta section .box div span:nth-child(2) video{
+	transform: rotateY(180deg);
+}
+
+.parta section video{
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: blur(10px);
+}
